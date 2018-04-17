@@ -3,11 +3,25 @@ package org.cse505.project1;
 import java.util.ArrayList;
 
 public class Order {
+    private static int DEFAULT_PRIORITY = 0;
+
     /**
      * Constructor.
+     *
+     * Constructs an order with DEFAULT_PRIORITY.
      */
     public Order() {
-        orderedItems = new ArrayList<>();
+        this.orderedItems = new ArrayList<>();
+        this.priority = DEFAULT_PRIORITY;
+    }
+
+    /**
+     * Order with a explicit priority.
+     * @param priority Priority of this order. Lower values have higher priority.
+     */
+    public Order(int priority) {
+        this.orderedItems = new ArrayList<>();
+        this.priority = priority;
     }
 
     /**
@@ -49,5 +63,10 @@ public class Order {
         return orderedItems.get(i);
     }
 
+    public int priority() {
+        return priority;
+    }
+
     private ArrayList<Item> orderedItems;
+    int priority;
 }

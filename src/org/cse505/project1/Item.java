@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public abstract class Item {
     /**
      * Constructor for the item.
-     * @param name The name of the item.
+     * @param name The name of the item. This will be used as the identifier of the item
+     *             and must be unique.
      * @param description Description about the item.
      * @param price Original price of the item.
      */
