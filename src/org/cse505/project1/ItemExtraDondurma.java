@@ -13,7 +13,7 @@ public class ItemExtraDondurma implements ItemExtra {
 
     /**
      * No cost. Complementary.
-     * @param actualItem The item that this is being added.
+     * @param actualItem The item that this is being added to.
      * @return The price modifier of the mega-size.
      */
     @Override

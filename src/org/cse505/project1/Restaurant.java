@@ -2,6 +2,9 @@ package org.cse505.project1;
 
 import java.util.ArrayList;
 
+/**
+ * The class that represents a restaurant.
+ */
 public class Restaurant {
     /**
      * Restaurant constructor.

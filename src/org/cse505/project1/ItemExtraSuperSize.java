@@ -13,7 +13,7 @@ public class ItemExtraSuperSize implements ItemExtra {
 
     /**
      * Costs 0.2 times the price of the original item
-     * @param actualItem The item that this is being added.
+     * @param actualItem The item that this is being added to.
      * @return The price modifier of the mega-size.
      */
     @Override

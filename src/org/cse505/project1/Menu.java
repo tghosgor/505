@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Set;
 import java.util.TreeSet;
 
+/**
+ * The class that represents the menu.
+ */
 public class Menu {
     /**
      * Menu constructor.

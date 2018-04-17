@@ -2,6 +2,9 @@ package org.cse505.project1;
 
 import java.util.ArrayList;
 
+/**
+ * Base class for items that are sold.
+ */
 public abstract class Item {
     /**
      * Constructor for the item.

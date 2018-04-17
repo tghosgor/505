@@ -1,5 +1,8 @@
 package org.cse505.project1;
 
+/**
+ * The class that represents the Dessert type of items.
+ */
 public class Dessert extends Item {
     /**
      * Dessert constructor.

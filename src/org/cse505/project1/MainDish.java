@@ -1,5 +1,8 @@
 package org.cse505.project1;
 
+/**
+ * The class that represents the main dishes.
+ */
 public class MainDish extends Item {
     /**
      * Constructor for main dish.

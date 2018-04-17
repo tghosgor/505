@@ -2,6 +2,9 @@ package org.cse505.project1;
 
 import java.util.ArrayList;
 
+/**
+ * The class that represents an order from a customer with many items.
+ */
 public class Order {
     private static int DEFAULT_PRIORITY = 0;
 
@@ -63,6 +66,10 @@ public class Order {
         return orderedItems.get(i);
     }
 
+    /**
+     * The priority of this order. Lower values mean higher priority.
+     * @return Priority.
+     */
     public int priority() {
         return priority;
     }

@@ -2,6 +2,9 @@ package org.cse505.project1;
 
 import java.util.ArrayList;
 
+/**
+ * The class that represents a table in the restaurant.
+ */
 public class Table {
     /**
      * Table constructor.

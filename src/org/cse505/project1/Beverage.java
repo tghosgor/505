@@ -1,5 +1,8 @@
 package org.cse505.project1;
 
+/**
+ * The class that represents Beverage items.
+ */
 public class Beverage extends Item {
     /**
      * Beverage constructor.

@@ -5,6 +5,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * System log class. This class has many responsibilities like logging, reporting, managing the orders.
+ *
+ * TODO(hosgor): usual way is one class does one thing. maybe seperate the order management from here.
+ */
 public class SystemLog {
     /**
      * Constructor.

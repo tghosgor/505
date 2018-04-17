@@ -1,5 +1,8 @@
 package org.cse505.project1;
 
+/**
+ * The class that represents the customers.
+ */
 public class Customer {
     /**
      * Customer constructor.
