@@ -77,9 +77,7 @@ public abstract class Item {
 
     public abstract boolean modifyItem(ItemExtra extra);
 
-    public ArrayList<ItemExtra> getItemExtras() {
-        return itemExtras;
-    }
+    public ArrayList<ItemExtra> getItemExtras() { return itemExtras; }
 
     private String name;
     private String description;

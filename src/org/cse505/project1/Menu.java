@@ -23,6 +23,7 @@ public class Menu {
      * @return true if added, false if not.
      */
     public boolean addItem(Item item) {
+        assert item != null;
         items.add(item);
         return true;
     }
@@ -33,30 +34,35 @@ public class Menu {
      * @return The removed item, null i'th item does not exist.
      */
     public Item removeItem(int i) {
-        try {
+        if (i < items.size())
             return items.remove(i);
-        } catch (IndexOutOfBoundsException e) {
+        else
             return null;
-        }
     }
 
     /**
      * Gets the i'th item from the menu.
      * @param i The item number to get.
-     * @return The item.
+     * @return The item. null if i'th item does not exist.
      */
     public Item getItem(int i) {
-        return items.get(i);
+        if (i < items.size())
+            return items.get(i);
+        else
+            return null;
     }
 
     /**
      * Replaces the i'th item in the menu with the given item.
      * @param i The item number to replace.
      * @param item Item to replace.
-     * @return The item that was previously in the menu.
+     * @return The item that was previously in the menu. null if could not replace.
      */
     public Item setItem(int i, Item item) {
-        return items.set(i, item);
+        if (i < items.size())
+            return items.set(i, item);
+        else
+            return null;
     }
 
     private ArrayList<Item> items;

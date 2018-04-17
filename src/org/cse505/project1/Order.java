@@ -33,6 +33,7 @@ public class Order {
      * @return true if added, false if not.
      */
     public boolean addItem(Item item) {
+        assert item != null;
         orderedItems.add(item);
         return true;
     }
@@ -43,11 +44,10 @@ public class Order {
      * @return The item removed if removed, null i'th item does not exist.
      */
     public Item removeItem(int i) {
-        try {
+        if (i < orderedItems.size())
             return orderedItems.remove(i);
-        } catch (IndexOutOfBoundsException e) {
+        else
             return null;
-        }
     }
 
     /**
@@ -60,10 +60,13 @@ public class Order {
     /**
      * Gets the i'th item from the orders.
      * @param i The item index to get.
-     * @return The i'th item.
+     * @return The i'th item. null if it does not exist.
      */
     public Item getItem(int i) {
-        return orderedItems.get(i);
+        if (i < orderedItems.size())
+            return orderedItems.get(i);
+        else
+            return null;
     }
 
     /**

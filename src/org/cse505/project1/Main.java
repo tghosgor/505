@@ -32,7 +32,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Waiting for input...");
+        System.out.println("Waiting for input...");
 
         while (scanner.hasNext()) {
             System.out.print("Command: ");

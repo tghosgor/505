@@ -12,6 +12,7 @@ public class Restaurant {
      */
     public Restaurant(int nTables) {
         tables = new Table[nTables];
+        menuList = new ArrayList<>();
 
         for (int i = 0; i < nTables; ++i) {
             // all tables have 4-customer capacity for now
@@ -23,10 +24,13 @@ public class Restaurant {
     /**
      * Gets i'th menu.
      * @param i The menu to get.
-     * @return The menu.
+     * @return The menu. null if i'th menu does not exist.
      */
     public Menu getMenu(int i) {
-        return menuList.get(i);
+        if (i < menuList.size())
+            return menuList.get(i);
+        else
+            return null;
     }
 
     /**
@@ -36,6 +40,7 @@ public class Restaurant {
      * @return The old menu, null if could not replace.
      */
     public Menu updateMenu(int i, Menu menu) {
+        assert menu != null;
         try {
             return menuList.set(i, menu);
         } catch (IndexOutOfBoundsException e) {
@@ -50,6 +55,7 @@ public class Restaurant {
      * @return true if added, false if not.
      */
     public boolean addMenu(Menu menu) {
+        assert menu != null;
         menuList.add(menu);
         return true;
     }
