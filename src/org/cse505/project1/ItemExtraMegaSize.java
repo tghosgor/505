@@ -1,9 +1,9 @@
 package org.cse505.project1;
 
-public class ItemExtraDondurma implements ItemExtra {
+public class ItemExtraMegaSize implements ItemExtra {
     @Override
     public String getName() {
-        return "Dondurma";
+        return "Super Size";
     }
 
     @Override
@@ -12,12 +12,12 @@ public class ItemExtraDondurma implements ItemExtra {
     }
 
     /**
-     * No cost. Complementary.
+     * Costs 0.4 times the price of the original item
      * @param actualItem The item that this is being added.
      * @return The price modifier of the mega-size.
      */
     @Override
     public Double getPrice(Item actualItem) {
-        return 0.0;
+        return actualItem.getPrice() / 0.4;
     }
 }

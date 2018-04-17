@@ -3,6 +3,12 @@ package org.cse505.project1;
 import java.util.ArrayList;
 
 public abstract class Item {
+    /**
+     * Constructor for the item.
+     * @param name The name of the item.
+     * @param description Description about the item.
+     * @param price Original price of the item.
+     */
     public Item(String name, String description, Double price) {
         this.name = name;
         this.description = description;
@@ -14,6 +20,10 @@ public abstract class Item {
         this.name = name;
     }
 
+    /**
+     * Gets the name of the item.
+     * @return The name of the item.
+     */
     public String getName() {
         return name;
     }
@@ -22,23 +32,31 @@ public abstract class Item {
         this.description = description;
     }
 
+    /**
+     * Gets the description for the item.
+     * @return The description of the item.
+     */
     public String getDescription() {
         return description;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
+    /**
+     * The original price of this item.
+     * @return The original price.
+     */
     public Double getPrice() {
         return price;
     }
 
+    /**
+     * Gets the total price with the added extras.
+     * @return Total price with extras included.
+     */
     public Double totalPrice() {
         Double total = price;
 
         for (ItemExtra extra : itemExtras)
-            total += extra.getPrice();
+            total += extra.getPrice(this);
 
         return total;
     }
